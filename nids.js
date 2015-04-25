@@ -36,6 +36,42 @@ nids.ClientId = {
 		return input;
 	}
 };
+nids.RequestId = {
+	is: function(input) {
+		return (
+			typeof input === 'string' 
+			&& input.length === 32 
+			&& input.indexOf('rid') === 0
+		);
+	},
+	create: function() {
+		return 'rid' + nids.randomString(16, true, true, true);
+	},
+	ensure: function(input) {
+		if (this.is(input) === false) {
+			return this.create();
+		}
+		return input;
+	}
+};
+nids.ConnectionId = {
+	is: function(input) {
+		return (
+			typeof input === 'string' 
+			&& input.length === 32 
+			&& input.indexOf('con') === 0
+		);
+	},
+	create: function() {
+		return 'con' + nids.randomString(16, true, true, true);
+	},
+	ensure: function(input) {
+		if (this.is(input) === false) {
+			return this.create();
+		}
+		return input;
+	}
+};
 nids.randomString = function(length, numbers, alphabetLowerCase, timestamp, alphabetUpperCase, extraChars) {
 	var charArray = new Array(length);
 	var randomString = '';
