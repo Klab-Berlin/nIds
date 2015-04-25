@@ -1,0 +1,16 @@
+{
+  "name": "nids",
+  "description": "ID generation and checking for the browser and nodejs",
+  "version": "0.1.0",
+  "author": "Toni Wagner <i@itsatony.com>",
+  "engine": "node >= 0.10",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/itsatony/nIds.git"
+  },
+	"main": "nids",		
+  "dependencies": {
+  },
+  "devDependencies": {
+  }
+}

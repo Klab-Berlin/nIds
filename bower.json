@@ -1,0 +1,32 @@
+{
+  "name": "nids",
+  "version": "0.1.0",
+  "homepage": "https://github.com/itsatony/nIds",
+  "authors": [
+    "itsatony <i@itsatony.com>"
+  ],
+  "description": "ID generation and checking for the browser and nodejs",
+  "main": "nids.js",
+  "moduleType": [
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "cid",
+    "rid",
+    "qid",
+    "for",
+    "n-verse",
+    "communication",
+    "and",
+    "control"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
