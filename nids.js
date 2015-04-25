@@ -79,10 +79,6 @@ nids.randomString = function(length, numbers, alphabetLowerCase, timestamp, alph
 	if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
 		module.exports = nids;
 	} 
-	// es6
-	else if (typeof export !== 'undefined') {
-		export nids;
-	}
 	// plain browser
 	else {
 		window.nids = nids;
