@@ -8,7 +8,10 @@ nids.QueryId = {
 			&& input.indexOf('qid') === 0
 		);
 	},
-	create: function() {
+	create: function(tail) {
+		if (typeof tail === 'string' && tail.length < 17) {
+			return 'qid' + nids.randomString(16 - tail.length, true, true, true) + tail;
+		}
 		return 'qid' + nids.randomString(16, true, true, true);
 	},
 	ensure: function(input) {
@@ -26,7 +29,10 @@ nids.ClientId = {
 			&& input.indexOf('cid') === 0
 		);
 	},
-	create: function() {
+	create: function(tail) {
+		if (typeof tail === 'string' && tail.length < 17) {
+			return 'cid' + nids.randomString(16 - tail.length, true, true, true) + tail;
+		}
 		return 'cid' + nids.randomString(16, true, true, true);
 	},
 	ensure: function(input) {
@@ -44,7 +50,10 @@ nids.RequestId = {
 			&& input.indexOf('rid') === 0
 		);
 	},
-	create: function() {
+	create: function(tail) {
+		if (typeof tail === 'string' && tail.length < 17) {
+			return 'rid' + nids.randomString(16 - tail.length, true, true, true) + tail;
+		}
 		return 'rid' + nids.randomString(16, true, true, true);
 	},
 	ensure: function(input) {
@@ -62,7 +71,10 @@ nids.ConnectionId = {
 			&& input.indexOf('con') === 0
 		);
 	},
-	create: function() {
+	create: function(tail) {
+		if (typeof tail === 'string' && tail.length < 17) {
+			return 'con' + nids.randomString(16 - tail.length, true, true, true) + tail;
+		}
 		return 'con' + nids.randomString(16, true, true, true);
 	},
 	ensure: function(input) {
